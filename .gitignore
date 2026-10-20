@@ -4,3 +4,7 @@
 *.zip
 node_modules/
 .DS_Store
+.playwright/
+qa/*.png
+qa/*.webm
+qa/*.zip

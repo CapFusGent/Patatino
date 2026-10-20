@@ -1,1 +1,42 @@
-const UNIT2 = {"title":"De en het","it":"Gli articoli","level":"A1 · unità 2","explanation":"<p>In questa unità impari a usare De en het in frasi quotidiane. L'idea è collegare una regola chiara a una situazione adulta: lavoro, casa e vita nelle Fiandre. In italiano alcune scelte sono espresse con ordine o preposizioni diverse; in neerlandese la posizione e la forma della parola contano molto. Parti dalla forma breve, osserva chi compie l'azione e poi aggiungi il resto della frase. Ripeti a voce: l'orecchio aiuta a riconoscere il ritmo. Quando una frase può avere più ordine, l'app accetta le varianti naturali indicate nell'esercizio.</p><p>Usa la tabella come promemoria, non come una lista da memorizzare tutta insieme. Una risposta competente e comune non viene penalizzata.</p>","error":"ik ben 2","correct":"ik ben 2","table":[["ik","io"],["jij / je","tu"],["u","Lei / voi"],["we","noi"]],"vlaanderen":"In Vlaanderen puoi incontrare forme colloquiali e parole regionali accanto allo standard. Qui usiamo lo standard comprensibile ovunque; l'uso locale può variare per zona e situazione.","keywords":[{"nl":"ik","it":"io"},{"nl":"jij","it":"tu"},{"nl":"u","it":"Lei"}],"words":[{"nl":"de fiets","it":"la bici"},{"nl":"het huis","it":"la casa"},{"nl":"werken","it":"lavorare"},{"nl":"wonen","it":"abitare"},{"nl":"goed","it":"buono"},{"nl":"vandaag","it":"oggi"},{"nl":"de stad","it":"la città"},{"nl":"de koffie","it":"il caffè"}],"vocab":[{"type":"mc","prompt":"Cosa significa 'de fiets'?","options":[{"nl":"la bici","it":"risposta corretta"},{"nl":"il lavoro","it":"distrattore"},{"nl":"oggi","it":"distrattore"}],"correct":0,"answer":"la bici","answerIt":"Traduzione corretta.","note":"La parola è stata presentata nel lessico."},{"type":"fill","prompt":"Completa: Ik ___ vandaag.","hint":"verbo: abitare","answers":["woon"],"answer":"woon","answerIt":"Io abito oggi.","note":"Il verbo si accorda con ik."}],"exercises":[{"type":"mc","prompt":"Scegli la frase corretta.","options":[{"nl":"Ik woon in de stad.","it":"Abito in città."},{"nl":"Ik wonen in de stad.","it":"forma non corretta"},{"nl":"Woon ik de stad.","it":"manca in"}],"correct":0,"answer":"Ik woon in de stad.","answerIt":"Abito in città.","note":"Con ik il verbo ha la forma woon."},{"type":"fill","prompt":"Completa: Het ___ goed.","hint":"essere, presente","answers":["is"],"answer":"is","answerIt":"È buono / va bene.","note":"La terza persona di zijn è is."}]};
+import { defineUnit } from './helpers.mjs';
+export default defineUnit({
+id:2,title:'Ik werk, jij werkt',it:'Il presente',group:0,
+explanation:`<h2>L'idea</h2>
+<p>Il presente neerlandese serve per abitudini, fatti attuali e, con un'indicazione temporale, programmi futuri. Non corrisponde soltanto a ciò che succede proprio adesso. Rispetto all'italiano le desinenze sono poche, ma il soggetto deve restare visibile. Per costruire una frase come <i>ik werk</i>, «lavoro», parti dall'infinito <i>werken</i> e individua la radice. Il presente non richiede un verbo ausiliare aggiuntivo.</p>
+<h3>1 · Trova la radice</h3>
+<p>In molti verbi togli <i>-en</i>: <i>werken</i> diventa <i>werk</i>. La grafia della radice può però cambiare per conservare il suono. Da <i>wonen</i> ottieni <i>woon</i>, con due vocali nella sillaba chiusa; da <i>maken</i> ottieni <i>maak</i>. Da <i>zitten</i> ricavi <i>zit</i>, senza raddoppiare la consonante finale. Impara quindi insieme infinito e forma con <i>ik</i>, senza applicare un semplice taglio meccanico.</p>
+<table><tr><th>Soggetto</th><th>Regola regolare</th><th>Forma</th></tr><tr><td>ik</td><td>radice</td><td>werk</td></tr><tr><td>jij, hij, zij, u</td><td>radice + t</td><td>werkt</td></tr><tr><td>wij, jullie, zij plurale</td><td>infinito</td><td>werken</td></tr></table>
+<h3>2 · Controlla persona e numero</h3>
+<p><i>Hij woont hier</i> significa «lui abita qui», mentre <i>wij wonen hier</i> significa «noi abitiamo qui». Con <i>wonen</i> indica il luogo: <i>hier</i> significa «qui». Un nome singolare usa normalmente la stessa forma di <i>hij</i>: <i>Nora werkt</i>. Se la radice termina già in <i>t</i>, non aggiungere una seconda lettera: <i>zitten</i> dà <i>hij zit</i>. La forma verbale va scelta dopo aver capito il soggetto, anche quando la frase contiene un altro nome.</p>
+<h3>3 · Impara le forme frequenti</h3>
+<p><i>Zijn</i>, essere, è irregolare e l'hai già incontrato. Anche <i>hebben</i>, avere, va imparato: <i>ik heb</i>, <i>jij hebt</i>, <i>hij heeft</i>, <i>wij hebben</i>. Con <i>u</i> sono corrette sia <i>hebt</i> sia <i>heeft</i>. Come modello usiamo il soggetto prima del verbo. Nelle domande o dopo un elemento anticipato il soggetto può seguire il verbo: <i>hier woon je</i>, «qui abiti tu». Con <i>jij/je</i> dopo il verbo cade la <i>t</i> aggiunta alla radice, ma resta quella che appartiene alla radice stessa.</p>
+<h3>Attenzione: errori tipici di chi parla italiano</h3>
+<p><s>Ik werken.</s> → <strong>Ik werk.</strong> Non usare l'infinito con <i>ik</i>. <s>Hij woon.</s> → <strong>Hij woont.</strong> Alla terza persona serve la terminazione. <s>Wij werkt.</s> → <strong>Wij werken.</strong> La forma plurale coincide con l'infinito.</p>`,
+keywords:'ben=sono, con ik|bent=sei, è con u|is=è|zijn=essere; siamo, siete, sono|heb=ho|hebt=hai, ha con u|heeft=ha|hebben=avere; abbiamo, avete, hanno',
+words:'werken=lavorare|wonen=abitare|leren=imparare|maken=fare, creare|koken=cucinare|drinken=bere|de koffie=il caffè|het water=l’acqua|hier=qui',
+vlaanderen:'Ge/gij appartiene al parlato informale di molte zone belghe e ha proprie forme verbali. Qui usa le persone dello standard indicate nella frase.',source:'gij',
+practiceNote:'Nel presente regolare: ik + radice, singolare + t, plurale + infinito.',
+rules:[
+['Ik ___ koffie.','drink','Bevo caffè.','Bere, prima persona singolare.','drinkt~Forma singolare con hij/jij.','drinken~Infinito e plurale.','Con ik usa la radice.'],
+['Hij ___ koffie.','drinkt','Lui beve caffè.','Bere, terza persona singolare.','drink~Forma con ik.','drinken~Forma plurale.','Hij richiede la t.'],
+['Wij ___ water.','drinken','Beviamo acqua.','Bere, prima persona plurale.','drink~Singolare con ik.','drinkt~Terza persona singolare.','Il plurale coincide con l’infinito.'],
+['Jij ___ koffie.','hebt','Hai caffè.','Avere, seconda persona singolare.','heb~Ho.','hebben~Avere o forme plurali.','Jij hebt; hij heeft.'],
+['Zij ___ water.','heeft','Lei ha acqua.','Avere, con lei singolare.','heb~Ho.','hebben~Forma plurale.','Zij singolare richiede heeft.'],
+['Ik ___.','werk','Lavoro.','Lavorare, prima persona.','werkt~Terza persona.','werken~Plurale o infinito.','La radice di werken è werk.'],
+['Hij ___ hier.','woont','Lui abita qui.','Abitare, terza persona.','woon~Forma con ik.','wonen~Plurale o infinito.','La vocale lunga richiede oo nella radice.'],
+['Jullie ___.','leren','Voi imparate.','Imparare, plurale.','leer~Forma con ik.','leert~Forma singolare.','Jullie usa la forma plurale.'],
+['Ik ___.','kook','Cucino.','Cucinare, prima persona.','koken~Infinito.','kookt~Terza persona.','Koken diventa ik kook.'],
+['We ___ koffie.','maken','Facciamo il caffè.','Fare, prima persona plurale.','maak~Forma con ik.','maakt~Forma singolare.','We richiede la forma plurale.']
+],
+sentences:[
+['Ik werk.','Lavoro.','!werktt'],
+['Jij woont hier.','Tu abiti qui.','koken',['Je woont hier.','Hier woon jij.','Hier woon je.']],
+['Hij leert.','Lui impara.','!leerent'],
+['Wij koken.','Cuciniamo.','werken',['We koken.']],
+['Ik drink water.','Bevo acqua.','!drinktt',['Water drink ik.']],
+['Zij drinkt koffie.','Lei beve caffè.','water',['Ze drinkt koffie.','Koffie drinkt zij.','Koffie drinkt ze.']],
+['Jullie maken koffie.','Voi fate il caffè.','!makent',['Koffie maken jullie.']],
+['Ik heb water.','Ho acqua.','koffie',['Water heb ik.']],
+['Hij heeft koffie.','Lui ha caffè.','!hebbt',['Koffie heeft hij.']],
+['Wij hebben water.','Abbiamo acqua.','koffie',['We hebben water.','Water hebben wij.','Water hebben we.']]
+]});

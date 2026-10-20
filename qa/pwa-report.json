@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "browser": "Chromium",
+  "buildSHA256": "680eb550c90f2b81c8138ad6396fa94b10e377b1adb078a41064cad1823a9234",
+  "units": [],
+  "layout": [],
+  "offline": true,
+  "installable": true,
+  "installability": [],
+  "reloadHistory": true,
+  "audio": true,
+  "storageUnavailable": true,
+  "speechUnavailable": true,
+  "javascriptErrors": [],
+  "reviewCleared": true,
+  "webkit": "smoke passed",
+  "cleanupWarnings": [
+    "Timeout: Chrome close"
+  ],
+  "completedAt": "2026-10-20T15:42:41.721Z"
+}

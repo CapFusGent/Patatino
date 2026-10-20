@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "units": 30,
+  "exercises": 600,
+  "acceptedAnswers": 1176,
+  "standaloneScriptSyntax": true,
+  "pngSizes": [
+    32,
+    180,
+    192,
+    512
+  ],
+  "manifest": true,
+  "contrast": {
+    "frietkot": {
+      "bg": 11.99,
+      "light": 15.86,
+      "paper": 17.6,
+      "notice": 15.29,
+      "success": 15.37
+    },
+    "mosselen": {
+      "bg": 13.29,
+      "light": 16.31,
+      "paper": 17.6,
+      "notice": 15.29,
+      "success": 15.37
+    },
+    "praline": {
+      "bg": 13.03,
+      "light": 16.21,
+      "paper": 17.6,
+      "notice": 15.29,
+      "success": 15.37
+    },
+    "atomium": {
+      "bg": 13.77,
+      "light": 16.31,
+      "paper": 17.6,
+      "notice": 15.29,
+      "success": 15.37
+    }
+  }
+}
