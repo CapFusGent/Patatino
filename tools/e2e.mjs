@@ -1,0 +1,1 @@
+import fs from 'node:fs';const h=fs.readFileSync('index.html','utf8');const units=(h.match(/"title":/g)||[]).length;if(units!==30)throw Error('E2E fixture count failed');if(!/function checkAnswer\(\)/.test(h)||!/function nextQ\(ok\)/.test(h))throw Error('exercise flow missing');console.log('E2E smoke OK: all 30 units are embedded and exercise/result flow exists.');
